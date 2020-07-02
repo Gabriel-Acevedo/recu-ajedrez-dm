@@ -1,0 +1,78 @@
+@startuml
+
+
+title Chess Domain Model
+
+    package "src.main.dm.utils"{
+        class Console{
+        }
+    }
+
+    package "src.main.dm.chess"{
+    
+        class Chess{
+        }
+    
+        class Game {
+        }
+        
+        class Board{
+        }
+        
+        class Turn{
+        }
+        
+        class Piece{
+        }
+        
+        enum PieceType{
+        }
+        
+        enum PieceSymbol{
+        }
+        
+        class King{
+        }
+        class Queen{
+        }
+        class Bishop{
+        }
+        class Knight{
+        }
+        class Rook{
+        }
+        class Pawn{
+        }
+        
+        enum Color{
+        } 
+    
+        enum Message{
+        }
+    }
+    
+   
+Chess <-up-* Game
+Game ..> Message
+Game *-left-> Board
+Board *-down-> Turn
+Turn *-up-> Color
+Game *-down-> Color
+Board <-up-* Piece
+Piece *-left-> PieceSymbol
+Piece *-left-> PieceType
+Piece *-up-> Color
+
+Piece <|-down- King
+Piece <|-down- Queen
+Piece <|-down- Bishop
+Piece <|-down- Knight
+Piece <|-down- Rook
+Piece <|-down- Pawn
+
+
+Game ..> Console
+
+@enduml
+
+@enduml
