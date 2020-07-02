@@ -1,6 +1,6 @@
 # Practica 1. Model del Dominio
 
-	## Descripcion
+## Descripcion
 
 A partir de la descripción del Ajedrez: https://es.wikipedia.org/wiki/Ajedrez
 
